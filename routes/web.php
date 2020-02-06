@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
+Route::get('dashboard','UserController@index')->name('dashboard');
+Route::get('time','TimeController@clockin')->name('time');
+Route::get('timein','UserController@getTime')->name('getTime');
